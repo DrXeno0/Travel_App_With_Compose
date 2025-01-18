@@ -37,7 +37,7 @@ val bottomBarItems = listOf(
 
 @Preview
 @Composable
-fun BottomBar(modifier: Modifier = Modifier.background(Color.White)) {
+fun NavigationBar(modifier: Modifier = Modifier.background(Color.White)) {
     var selectedItemType by remember { mutableStateOf("") }
     Row(
         modifier = Modifier
@@ -50,7 +50,7 @@ fun BottomBar(modifier: Modifier = Modifier.background(Color.White)) {
     ) {
         bottomBarItems.forEach { item ->
             val isSelected = selectedItemType == item.title
-            BottomBarItem(
+            BottomNavigationItem(
                 item = item,
                 isSelected = isSelected,
                 onClick = {
@@ -64,7 +64,7 @@ fun BottomBar(modifier: Modifier = Modifier.background(Color.White)) {
 }
 
 @Composable
-fun BottomBarItem(item: BottomBarItem, modifier: Modifier = Modifier, isSelected: Boolean = false, onClick: () -> Unit = {}) {
+fun BottomNavigationItem(item: BottomBarItem, modifier: Modifier = Modifier, isSelected: Boolean = false, onClick: () -> Unit = {}) {
 
 
     Box(

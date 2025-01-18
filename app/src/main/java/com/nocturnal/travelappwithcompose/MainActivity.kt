@@ -14,7 +14,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
 import com.nocturnal.travelappwithcompose.ui.components.Appbar
-import com.nocturnal.travelappwithcompose.ui.components.BottomBar
+import com.nocturnal.travelappwithcompose.ui.components.NavigationBar
 import com.nocturnal.travelappwithcompose.ui.screens.HomeScreen
 import com.nocturnal.travelappwithcompose.ui.theme.TravelAppWithComposeTheme
 
@@ -33,7 +33,7 @@ class MainActivity : ComponentActivity() {
                 Scaffold(
                     modifier = Modifier.padding(top = statusBarHeight + 4.dp),
                     topBar = { Appbar() },
-                    bottomBar = {Box(modifier = Modifier.background(Color.White)) { BottomBar() }}
+                    bottomBar = {Box(modifier = Modifier.background(Color.White)) { NavigationBar() }}
                 ) { contentPadding ->
                     Box(
                         modifier = Modifier
