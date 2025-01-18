@@ -17,12 +17,12 @@ import androidx.compose.material3.NavigationBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.nocturnal.travelappwithcompose.R
+import com.nocturnal.travelappwithcompose.ui.theme.PurplePrimary
 
 @Composable
 fun NavBar() {
@@ -39,7 +39,7 @@ fun NavBarMenuButton(onClick: () -> Unit = {}) {
 
     }) {
         Icon(
-            painter = painterResource(id = R.drawable.menu_icon), contentDescription = "menu button",tint = Color(0xFF674DEE)
+            painter = painterResource(id = R.drawable.menu_icon), contentDescription = "menu button",tint = PurplePrimary
         )
     }
 }
@@ -60,7 +60,7 @@ fun ProfileButton(imageResource: Int = R.drawable.profile_image, onClick: () -> 
 @Preview
 @Composable
 fun Appbar(){
-    Row(modifier = Modifier.fillMaxWidth().padding(16.dp)) {
+    Row(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp)) {
         NavBarMenuButton()
         Spacer(modifier = Modifier.weight(1f))
         ProfileButton()

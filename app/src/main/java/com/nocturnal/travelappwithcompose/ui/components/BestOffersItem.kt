@@ -30,6 +30,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.nocturnal.travelappwithcompose.R
+import com.nocturnal.travelappwithcompose.ui.theme.PurplePrimary
 
 
 @Preview
@@ -98,7 +99,7 @@ fun BestOffersItem(
                         fontSize = 12.sp,
                         fontFamily = FontFamily(Font(R.font.poppins)),
                         fontWeight = FontWeight(600),
-                        color = Color(0xFF674DEE),
+                        color = PurplePrimary,
 
                         textDecoration = TextDecoration.Underline,
                     ),
